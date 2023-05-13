@@ -4,17 +4,23 @@
 class smart_array {
 
 private:
+	int size = 0;
 	int counter = 0;
 	int* arr;
-	int size = 0;
 
 public:
 	smart_array(int size_);
+	smart_array(smart_array& _arr);
 
 	void add_element(int el);
 	int get_element(int el);
 
+	void get_info();
+
+	smart_array operator+(smart_array& left);
+
 	smart_array operator=(smart_array& left);
+	
 
 	~smart_array();
 };

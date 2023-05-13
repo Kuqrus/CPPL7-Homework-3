@@ -23,15 +23,15 @@ void task_3_2() {
 		arr.add_element(4);
 		arr.add_element(155);
 
+		smart_array arr_copy(arr);
+
 		smart_array new_array(2);
 		new_array.add_element(44);
 		new_array.add_element(34);
 
 		arr = new_array;
-
-		for (int i = 0; i < 5; i++) {
-			std::cout << arr.get_element(i) << " ";
-		}
+		arr.get_info();
+		arr_copy.get_info();
 	}
 	catch (const std::exception& ex)
 	{

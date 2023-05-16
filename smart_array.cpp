@@ -9,7 +9,7 @@ smart_array::smart_array(const smart_array& _arr) {
 	size = _arr.size;
 	counter = _arr.counter;
 
-	// Äîáàâèë ýòó ñòðî÷êó òàê êàê áåç íåå â 17 ñòðîêå âûëåçàåò ïðåäóïðåæäåíèå C6386
+	// Ð”Ð¾Ð±Ð°Ð²Ð¸Ð» ÑÑ‚Ñƒ ÑÑ‚Ñ€Ð¾Ñ‡ÐºÑƒ Ñ‚Ð°Ðº ÐºÐ°Ðº Ð±ÐµÐ· Ð½ÐµÐµ Ð² 17 ÑÑ‚Ñ€Ð¾ÐºÐµ Ð²Ñ‹Ð»ÐµÐ·Ð°ÐµÑ‚ Ð¿Ñ€ÐµÐ´ÑƒÐ¿Ñ€ÐµÐ¶Ð´ÐµÐ½Ð¸Ðµ C6386
 	if (counter > size) throw std::exception{ "Cannot create array, counter exceecds size!" };
 
 	arr = new int[size];

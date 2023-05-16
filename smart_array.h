@@ -19,7 +19,7 @@ public:
 
 	smart_array operator+(smart_array& left);
 
-	smart_array operator=(smart_array& left);
+	smart_array operator=(const smart_array& left);
 	
 
 	~smart_array();

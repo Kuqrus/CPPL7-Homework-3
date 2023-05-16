@@ -62,7 +62,7 @@ smart_array smart_array:: operator+(smart_array& left) {
 	return *arr;
 }
 
-smart_array smart_array:: operator=(smart_array& left) {
+smart_array smart_array:: operator=(const smart_array& left) {
 	if (this != &left) {
 		if (left.counter > size) {
 			delete[] arr;

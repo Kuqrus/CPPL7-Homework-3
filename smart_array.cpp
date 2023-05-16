@@ -5,7 +5,7 @@ smart_array::smart_array(int size_) {
 	arr = new int[size];
 }
 
-smart_array::smart_array(smart_array& _arr) {
+smart_array::smart_array(const smart_array& _arr) {
 	size = _arr.size;
 	counter = _arr.counter;
 
@@ -64,12 +64,20 @@ smart_array smart_array:: operator+(smart_array& left) {
 
 smart_array smart_array:: operator=(smart_array& left) {
 	if (this != &left) {
+		if (left.counter > size) {
+			delete[] arr;
+			arr = new int[left.size];
+		}
+
 		size = left.size;
-		counter = left.counter;
+		counter = left.counter;		
+
+		if (counter > size) throw std::exception{ "Cannot create array, counter exceecds size!" };
+
 		for (int i = 0; i < counter; i++) {
 			arr[i] = left.arr[i];
 		}
-	}	
+	}
 	return *this;
 }
 

@@ -4,6 +4,7 @@
 
 int main()
 {
-	task_3_1();
-	task_3_2();	
+	//task_3_1();
+	task_3_2();		
+
 }

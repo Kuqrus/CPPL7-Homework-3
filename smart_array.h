@@ -10,7 +10,7 @@ private:
 
 public:
 	smart_array(int size_);
-	smart_array(smart_array& _arr);
+	smart_array(const smart_array& _arr);
 
 	void add_element(int el);
 	int get_element(int el);

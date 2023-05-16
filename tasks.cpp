@@ -18,19 +18,27 @@ void task_3_1() {
 void task_3_2() {
 	try
 	{
-		smart_array arr(5);
-		arr.add_element(1);
-		arr.add_element(4);
-		arr.add_element(155);
+		smart_array arr(2);
+		for (int i = 0; i < 2; i++) {
+			arr.add_element(std::rand() % 20);
+		}
 
-		smart_array arr_copy(arr);
+		const smart_array const_arr_copy(arr);
+		smart_array arr_copy(const_arr_copy);
 
-		smart_array new_array(2);
-		new_array.add_element(44);
-		new_array.add_element(34);
+		smart_array new_array(4);
+		for (int i = 0; i < 4; i++) {
+			new_array.add_element(std::rand() % 20);
+		}
 
 		arr = new_array;
+
+		std::cout << "Equalized array:\n";
 		arr.get_info();
+
+		std::cout << std::endl;
+
+		std::cout << "Copied const array:\n";
 		arr_copy.get_info();
 	}
 	catch (const std::exception& ex)
